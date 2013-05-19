@@ -3,3 +3,4 @@ include/config_online.php
 .buildpath
 .project
 *.swp
+.DS_Store
