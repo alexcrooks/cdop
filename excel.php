@@ -110,7 +110,7 @@ for ($i = 0; $i < (($data['time'] + 2) / 2); $i++) {
         $excel->getActiveSheet()->setCellValue('V'.($rowNum+1), '1o1');
         $excel->getActiveSheet()->setCellValue('W'.($rowNum+1), 'D/V');
         $excel->getActiveSheet()->setCellValue('X'.($rowNum+1), 'Adm');
-        $excel->getActiveSheet()->setCellValue('Y'.($rowNum+1), 'N');
+        $excel->getActiveSheet()->setCellValue('Y'.($rowNum+1), 'W');
         $excel->getActiveSheet()->setCellValue('Z'.($rowNum+1), 'O');
 
         $excel->getActiveSheet()->setCellValue('AA'.$rowNum, '3. Eng');

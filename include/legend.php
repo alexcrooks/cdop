@@ -20,7 +20,7 @@
 <td><b>2. Instructor is Doing</b>
 <table>
 <tr><td>Lec</td><td>Lecturing (presenting content, deriving mathematical results, presenting a problem solution)</td></tr>
-<tr><td>RtW</td><td>Real time writing (board, doc. projector, etc.)</td></tr>
+<tr><td>RtW</td><td>Real time writing (board, doc. projector, etc.) (often checked off with Lec)</td></tr>
 <tr><td>FUp</td><td>Follow-up/feedback on clicker question or activity to entire class</td></tr>
 <tr><td>PQ</td><td>Posing non-clicker question to students (non-rhetorical)</td></tr>
 <tr><td>CQ</td><td>Asking a clicker question (mark the entire time the instructor is using a clicker question, not just when first asked)</td></tr>
@@ -29,7 +29,7 @@
 <tr><td>1o1</td><td>One-on-one: extended discussion with one or a few individuals neglecting the rest of the class (can be along with MG or AnQ)</td></tr>
 <tr><td>D/V</td><td>Showing or conducting demo, experiment, simulation, video, animation, or photo</td></tr>
 <tr><td>Adm</td><td>Administration (assign homework, return tests, etc)</td></tr>
-<tr><td>N</td><td>Nothing - no activity while waiting for activity to complete, etc.</td></tr>
+<tr><td>W</td><td>Waiting - no other obvious activity while waiting for activity to complete, etc.</td></tr>
 <tr><td>O</td><td>Other - explain in comments</td></tr>
 </table>
 </td>

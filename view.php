@@ -68,7 +68,7 @@ Observer: <?php echo $data['observer_name']; ?> (<?php echo $data['observer_inst
 </div>
 </div>
 <div class="viewPageToPrint">
-<h1>Classroom Dynamics Observation Protocol (CDOP), ver 6 (as of 21 Mar 2013)</h1>
+<h1>Classroom Dynamics Observation Protocol (CDOP), ver 7 (as of 19 May 2013)</h1>
 This protocol was adapted from: Hora, M., & Ferrare, J.. (2009). Structured observation protocol for instruction
 in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin-Madison, Wisconsin Center for Education Research.
 <br /><br /><br />
@@ -130,7 +130,7 @@ for ($i = 0; $i < (($data['time'] + 2) / 2); $i++) {
 <td>1o1</td>
 <td>D/V</td>
 <td>AD</td>
-<td>N</td>
+<td>W</td>
 <td>O</td>
 </tr>
 <?php

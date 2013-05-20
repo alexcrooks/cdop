@@ -11,7 +11,7 @@
 <div class="clockLabel" onclick="stopRows(false); return false;">Stop Watch</div>
 </div>
 </div>
-<h1>Classroom Dynamics Observation Protocol (CDOP), ver 6 (as of 21 Mar 2013)</h1>
+<h1>Classroom Dynamics Observation Protocol (CDOP), ver 7 (as of 19 May 2013)</h1>
 This protocol was adapted from: Hora, M., & Ferrare, J.. (2009). Structured observation protocol for instruction
 in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin-Madison, Wisconsin Center for Education Research.
 <br /><br /><br />
@@ -71,7 +71,7 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
 <td title="Focus on small group of individuals">1o1</td>
 <td title="Demo/video/photo/simulation">D/V</td>
 <td title="Administration">Adm</td>
-<td title="Nothing">N</td>
+<td title="Waiting">W</td>
 <td title="Other">O</td>
 </tr>
 <tr class="row_to_clone">
@@ -101,7 +101,7 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
 <td title="Focus on small group of individuals"><input type="checkbox" value="1" name="table_1o1[0]" class="checkbox_reg" /></td>
 <td title="Demo/video/photo/simulation"><input type="checkbox" value="1" name="table_DV[0]" class="checkbox_reg" /></td>
 <td title="Administration"><input type="checkbox" value="1" name="table_AD[0]" class="checkbox_reg" /></td>
-<td title="Nothing"><input type="checkbox" value="1" name="table_N[0]" class="checkbox_reg" /></td>
+<td title="Waiting"><input type="checkbox" value="1" name="table_N[0]" class="checkbox_reg" /></td>
 <td title="Other"><input type="checkbox" value="1" name="table_IO[0]" class="checkbox_reg" /></td>
 
 <td><select name="table_Eng[0]" class="select_eng"><option value="">?</option><option value="Low">Low</option><option value="Med">Med</option><option value="High">High</option></select></td>
@@ -172,7 +172,7 @@ Information could include:<br />
 &bull; The structure of the lesson (e.g., how the instructor sequenced material, the narrative arc of the class)<br />
 &bull; The range and nature of activities that occurred.<br />
 &bull; Dialogue/behaviors that illustrate codes you gave, especially for teaching techniques and student engagement.<br />
-&bull; Teacher’s actions that appear to have affected students’ engagement or cognitive demand modes.<br />
+&bull; Teacherï¿½s actions that appear to have affected studentsï¿½ engagement or cognitive demand modes.<br />
 &bull; Evidence of variability among students (e.g., if small groups, to what extent did groups behave and engage similarly?)
 </p>
 <textarea name="narrative"></textarea>
