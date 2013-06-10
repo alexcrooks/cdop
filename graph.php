@@ -1,8 +1,8 @@
 <?php
-require("finally.php");
-include("include/header.php");
+require('finally.php');
+include('include/header.php');
 
-if ($_POST['graph_rest'] == "dist") {
+if ($_POST['graph_rest'] == 'dist'):
 ?>
 <script type="text/javascript">
 function drawVisualization() {
@@ -16,9 +16,9 @@ function drawVisualization() {
 google.setOnLoadCallback(drawVisualization);
 </script>
 <?php
-}
+endif;
 ?>
 <div id="visualization" style="width: 600px; height: 400px;"></div>
-<?php include("include/legend.php"); ?>
+<?php include('include/legend.php'); ?>
 <img src="img/door_out.png" /> <a href="view.php?id=<?php echo $_GET['id']; ?>">Go Back</a>
-<?php include("include/footer.php"); ?>
+<?php include('include/footer.php'); ?>

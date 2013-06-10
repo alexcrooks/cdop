@@ -1,18 +1,17 @@
 <?php
 require('finally.php');
 require('include/header.php');
-$time = "";
+$time = '';
 
 for ($i = 0; $i <= ($data['time'] + 2); $i += 2) { 
-    $time .= "<option value=\"".$i."\">".$i."</option>\n";
+    $time .= '<option value="' . $i . '">' . $i . '</option>' . "\n";
 }
 $outOfClass = array();
-$outOfClass[] = isset($data['class_ooc_homework']) ? "Homework" : "";
-$outOfClass[] = isset($data['class_ooc_prereading']) ? "Pre-Readings" : "";
-$outOfClass[] = isset($data['class_ooc_labs']) ? "Labs" : "";
-$outOfClass[] = isset($data['class_ooc_projects']) ? "Projects" : "";
+$outOfClass[] = isset($data['class_ooc_homework']) ? 'Homework' : '';
+$outOfClass[] = isset($data['class_ooc_prereading']) ? 'Pre-Readings' : '';
+$outOfClass[] = isset($data['class_ooc_labs']) ? 'Labs' : '';
+$outOfClass[] = isset($data['class_ooc_projects']) ? 'Projects' : '';
 $outOfClass = array_filter($outOfClass);
-
 ?>
 <div class="viewPageNoPrint">
 <b><?php echo $data['class_name']; ?></b> as instructed by 
@@ -89,14 +88,14 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
         </tr>
     <?php endif; ?>
     <tr class="row_to_clone">
-    <td><?php echo ($i*2)."-".(($i*2)+2); ?> min</td>
+    <td><?php echo ($i * 2) . "-" . (($i * 2) + 2); ?> min</td>
 
     <?php foreach ($tableElements as $elementName): ?>
-        <td><?php echo isset($data['table_' . $elementName][$i]) ? "<img class=\"tableFieldTaken\" src=\"img/blackpixel.jpg\" />" : ""; ?></td>
+        <td><?php echo isset($data['table_' . $elementName][$i]) ? '<img class="tableFieldTaken" src="img/blackpixel.jpg" />' : ''; ?></td>
     <?php endforeach; ?>
-    <td><?php echo isset($data['table_Eng'][$i]) ? $data['table_Eng'][$i] : ""; ?></td>
+    <td><?php echo isset($data['table_Eng'][$i]) ? $data['table_Eng'][$i] : ''; ?></td>
 
-    <td><?php echo isset($data['table_Comments'][$i]) ? $data['table_Comments'][$i] : ""; ?></td>
+    <td><?php echo isset($data['table_Comments'][$i]) ? $data['table_Comments'][$i] : ''; ?></td>
     </tr>
 <?php endfor; ?>
 </table>
@@ -118,4 +117,4 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
 <?php echo $data['narrative']; ?>
 </blockquote>
 </div>
-<?php include("include/footer.php"); ?>
+<?php include('include/footer.php'); ?>
