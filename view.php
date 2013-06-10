@@ -17,7 +17,7 @@ $outOfClass = array_filter($outOfClass);
 <b><?php echo $data['class_name']; ?></b> as instructed by 
 <b><?php echo $data['instructor_name']; ?></b> on 
 <b><?php echo $date; ?></b><br /><br />
-Observer: <?php echo $data['observer_name']; ?> (<?php echo $data['observer_institution']; ?>)<br /><br />
+Observer: <?php echo $data['observer_name']; ?><br /><br />
 <div class="viewPageLane"><img src="img/add.png" /> <a href="index.php">New Session</a></div>
 <div class="viewPageLane"><img src="img/printer.png" /> <a onclick="window.print();">Print Data</a></div>
 <div class="viewPageLane"><img src="img/page_excel.png" /> <a href="excel.php?id=<?php echo $_GET['id']; ?>">Export Data to Excel</a></div>
@@ -90,7 +90,7 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
     <tr class="row_to_clone">
     <td><?php echo ($i * 2) . "-" . (($i * 2) + 2); ?> min</td>
 
-    <?php foreach ($tableElements as $elementName): ?>
+    <?php foreach ($tableElements as $elementName => $elementDesc): ?>
         <td><?php echo isset($data['table_' . $elementName][$i]) ? '<img class="tableFieldTaken" src="img/blackpixel.jpg" />' : ''; ?></td>
     <?php endforeach; ?>
     <td><?php echo isset($data['table_Eng'][$i]) ? $data['table_Eng'][$i] : ''; ?></td>
