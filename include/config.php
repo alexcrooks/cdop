@@ -1,9 +1,6 @@
 <?php
+require('db.php');
 date_default_timezone_set('America/Vancouver');
-$global['host'] = "localhost";
-$global['username'] = "root";
-$global['password'] = "";
-$global['database'] = "louisdeslauriers";
 
 $mysqli = new mysqli($global['host'], $global['username'], $global['password'], $global['database']);
 
