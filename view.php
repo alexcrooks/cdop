@@ -1,6 +1,6 @@
 <?php
-require("finally.php");
-include("include/header.php");
+require('finally.php');
+require('include/header.php');
 $time = "";
 
 for ($i = 0; $i <= ($data['time'] + 2); $i += 2) { 

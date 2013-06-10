@@ -1,4 +1,4 @@
-<?php include("include/header.php"); ?>
+<?php require('include/header.php'); ?>
 <div id="ite">Begin the next time interval now.</div>
 
 <div id="floatingClock">
