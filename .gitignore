@@ -4,3 +4,4 @@ include/config_online.php
 .project
 *.swp
 .DS_Store
+include/db.php
