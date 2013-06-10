@@ -32,7 +32,8 @@ a:hover { text-decoration: underline; }
 #showHideLegend { width: 60%; margin-bottom: 30px; background-color: #ccc; font-weight: bold; }
 #mainTable { text-align: center; }
 #lbl select, #lbl input[type=text], textarea { padding: 3px 5px; font-size: 12pt; }
-.tableFieldTaken { width: 100%; height: 100%; }
+td.tableFieldTaken { min-width: 20px; min-height: 20px; }
+img.tableFieldTaken { width: 100%; height: 100%; }
 
 #floatingClock, #start, #ite { -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; font-weight: bold; text-align: center; color: white; background-color: #344152; background: url('img/low_contrast_linen.png') repeat; font-size: 14pt; z-index: 5; }
 #floatingClock { position: fixed; top: 100px; right: 50px; width: 180px; padding: 10px; }

@@ -91,7 +91,7 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
     <td><?php echo ($i * 2) . "-" . (($i * 2) + 2); ?> min</td>
 
     <?php foreach ($tableElements as $elementName => $elementDesc): ?>
-        <td><?php echo isset($data['table_' . $elementName][$i]) ? '<img class="tableFieldTaken" src="img/blackpixel.jpg" />' : ''; ?></td>
+        <td class="tableFieldTaken"><?php echo isset($data['table_' . $elementName][$i]) ? '<img class="tableFieldTaken" src="img/blackpixel.jpg" />' : ''; ?></td>
     <?php endforeach; ?>
     <td><?php echo isset($data['table_Eng'][$i]) ? $data['table_Eng'][$i] : ''; ?></td>
 
