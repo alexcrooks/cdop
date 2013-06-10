@@ -1,28 +1,9 @@
 <?php
 require("finally.php");
+require("include/data.php");
 date_default_timezone_set("America/Vancouver");
 require_once("phpexcel/Classes/PHPExcel/IOFactory.php");
 require_once("phpexcel/Classes/PHPExcel.php");
-
-$instructorUses = array();
-$instructorUses[] = isset($data['iu_powerpoint']) ? "Powerpoint" : "";
-$instructorUses[] = isset($data['iu_tablet']) ? "Tablet" : "";
-$instructorUses[] = isset($data['iu_projector']) ? "Projector" : "";
-$instructorUses[] = isset($data['iu_iclicker']) ? "iClicker" : "";
-$instructorUses[] = isset($data['iu_whiteboard']) ? "Whiteboard" : "";
-$instructorUses[] = isset($data['iu_microphone']) ? "Microphone" : "";
-$instructorUses[] = isset($data['iu_ta']) ? "TA" : "";
-$instructorUses[] = isset($data['iu_other']) && $data['su_other'] != "Other" ? "Other" : "";
-$instructorUses = array_filter($instructorUses);
-
-$studentUses = array();
-$studentUses[] = isset($data['su_nothing']) ? "Nothing" : "";
-$studentUses[] = isset($data['su_papernotes']) ? "Paper Notes" : "";
-$studentUses[] = isset($data['su_givennotes']) ? "Given Notes" : "";
-$studentUses[] = isset($data['su_laptop']) ? "Laptop" : "";
-$studentUses[] = isset($data['su_distractor']) ? "Distractor" : "";
-$studentUses[] = isset($data['su_other']) && $data['su_other'] != "Other" ? "Other" : "";
-$studentUses = array_filter($studentUses);
 
 $excel = new PHPExcel();
 $excel->getProperties()->setTitle("CDOP Report for ".$data['instructor_name']." on ".$date);
@@ -45,7 +26,7 @@ $excel->getActiveSheet()->getPageMargins()->setTop(0.25)
 $excel->getActiveSheet()->setShowGridlines(true);
 
 $excel->getActiveSheet()
-      ->setCellValue('A1', 'Observed by: '.$data['observer_name'].' ('.$data['observer_institution'].');        
+      ->setCellValue('A1', 'Observed by: '.$data['observer_name'].';
       Seated at: '.$data['observer_location']);
 $excel->getActiveSheet()->getStyle("A1")->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 $excel->getActiveSheet()->mergeCells('A1:Z1');
@@ -60,15 +41,6 @@ $excel->getActiveSheet()
       Class arrangement: '.$data['room_layout']);
 $excel->getActiveSheet()->getStyle("A3")->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 $excel->getActiveSheet()->mergeCells('A3:Z3');
-
-$excel->getActiveSheet()->setCellValue('A4', 'Instructor using: '.implode(", ", $instructorUses));
-$excel->getActiveSheet()->getStyle("A4")->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
-$excel->getActiveSheet()->mergeCells('A4:Z4');
-
-$excel->getActiveSheet()->setCellValue('A5', 'Students using: '.implode(", ", $studentUses));
-$excel->getActiveSheet()->getStyle("A5")->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
-$excel->getActiveSheet()->mergeCells('A5:Z5');
-
 
 $rowNum = 7;
 
