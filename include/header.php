@@ -14,6 +14,7 @@ body { margin: 10px; font-family: Helvetica, Arial, sans-serif; font-size: 10pt;
 h1 { font-size: 18pt; }
 h2 { font-size: 14pt; }
 textarea { width: 700px; height: 125px; font-family: Helvetica, Arial, sans-serif; }
+table tr { vertical-align: top; }
 label { display: none; }
 img { vertical-align: bottom; }
 input[type=submit] { font-size: 14pt; }

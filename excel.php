@@ -24,7 +24,7 @@ $excel->getDefaultStyle()->getAlignment()->setHorizontal(PHPExcel_Style_Alignmen
 $activeSheet->getPageMargins()->setTop(0.25)
                               ->setRight(0.25)
                               ->setBottom(0.25)
-                              ->setLeft(0.25);   
+                              ->setLeft(0.25);
 $activeSheet->setShowGridlines(true);
 
 $activeSheet->setCellValue('A1', 'Observed by: '.$data['observer_name'].'; Seated at: '.$data['observer_location']);
