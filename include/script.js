@@ -91,8 +91,8 @@ function addRow() {
 
 var w,x,y,z;
 var updateClockInterval = 1000;
-var addRowInterval = 20000; // 2 minutes = 120000
-var fadeInterval = 20000;
+var addRowInterval = 120000; // 2 minutes = 120000
+var fadeInterval = 120000;
 var time = 0;
 
 function itsTime() {
