@@ -56,24 +56,17 @@ function arrayToCleanJSON($array)
 }
 
 /**
- * Cleans up an array to leave only the elements prefixed with table_. Also 
- * removes extraneous fields (Eng, Comments).
+ * Cleans up an array to leave only the requested elements as per param typeToKeep
  *
+ * @param typeToKeep The type of data to keep ('student', 'instructor', 'Eng')
  * @param array The data to be cleaned.
  * @returns A cleaned up array.
  */
-function cleanArray($array)
+function cleanArray($typeToKeep, $array)
 {
     foreach ($array as $key => $value) {
-        if (substr($key, 0, 6) != 'table_') {
+        if (strpos($key, 'table_' . $typeToKeep) === false) {
             unset($array[$key]);
-        } else {
-            switch(substr($key, 6)) { 
-                case 'Eng': // We aren't working with these ones.
-                case 'Comments':
-                    unset($array[$key]);
-                    break;
-            }
         }
     }
     return $array;
@@ -105,6 +98,25 @@ function countForPieChartDist($array, $time_start, $time_end)
         }
         // ['name'], #] where 'name' has the table_ prefix removed.
         $return[] = "['".substr(str_replace(array('student_', 'instructor_'), '', $key), 6)."', ".count($array[$key])."]";
+    }
+    return implode(', ', $return);
+}
+
+// Same as above but for Eng codes
+function countEngForPieChartDist($array, $time_start, $time_end)
+{
+    $key_start = $time_start / 2; // key = time / 2;
+    $key_end = $time_end / 2;
+    $return = array();
+
+    foreach ($array['table_Eng'] as $key => $value) {
+        if (($key_start > $key) || ($key_end < $key)) {
+            // This is not within our time range -- goodbye.
+            unset($array['table_Eng'][$key]);
+        }
+    }
+    foreach (array_count_values($array['table_Eng']) as $key => $value) {
+        $return[] = "['".$key."', ".$value."]";
     }
     return implode(', ', $return);
 }

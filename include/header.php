@@ -27,6 +27,11 @@ a:hover { text-decoration: underline; }
 .text_main { width: 200px; color: #ccc; }
 .viewPageLane { margin-top: 6px; }
 
+#graphContainer { white-space: nowrap; }
+.graph { float: left; }
+.graph h1 { font-size: 14pt; }
+.graph .graphContainer { width: 400px; height: 300px; }
+
 #legend { width: 60%; background-color: #eee; }
 #legend td { vertical-align: top; }
 #showHideLegend { width: 60%; margin-bottom: 30px; background-color: #ccc; font-weight: bold; }
