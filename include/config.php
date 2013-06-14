@@ -124,7 +124,7 @@ $tableElements = array(
     'Prd' => 'Making predictions (e.g. outcome of demo)',
     'SP' => 'Student presentation',
     'TQ' => 'Test/quiz',
-    'SW' => 'Waiting (no instructor, technical issues, instructor busy)',
+    'SW' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
     'SO' => 'Other',
 
     'Lec' => 'Lecturing',
@@ -137,5 +137,5 @@ $tableElements = array(
     '1o1' => 'Focus on small group of individuals',
     'DV' => 'Demo/video/photo/simulation',
     'AD' => 'Administration',
-    'IW' => 'Waiting',
+    'IW' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
     'IO' => 'Other');
