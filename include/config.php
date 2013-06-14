@@ -116,7 +116,9 @@ function countEngForPieChartDist($array, $time_start, $time_end)
         }
     }
     foreach (array_count_values($array['table_Eng']) as $key => $value) {
-        $return[] = "['".$key."', ".$value."]";
+        if ($key != "") {
+            $return[] = "['".$key."', ".$value."]";
+        }
     }
     return implode(', ', $return);
 }
