@@ -48,7 +48,7 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
 </tr>
 <tr>
 <?php foreach ($tableElements as $elementName => $elementDesc): ?>
-<td title="<?php echo $elementDesc; ?>"><?php echo $elementName; ?></td>
+<td title="<?php echo $elementDesc; ?>"><?php echo str_replace(array('student_', 'instructor_'), '', $elementName); ?></td>
 <?php endforeach; ?>
 </tr>
 <tr class="row_to_clone">

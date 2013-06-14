@@ -65,7 +65,7 @@ for ($i = 0; $i < (($data['time'] + 2) / 2); $i++) {
         $columnNum = 'B';
 
         foreach ($tableElements as $elementName => $elementDesc) {
-            $activeSheet->setCellValue($columnNum . ($rowNum + 1), $elementName);
+            $activeSheet->setCellValue($columnNum . ($rowNum + 1), str_replace(array('student_', 'instructor_'), '', $elementName));
             $columnNum++;
         }
         $rowNum += 2;

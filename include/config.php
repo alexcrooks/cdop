@@ -104,7 +104,7 @@ function countForPieChartDist($array, $time_start, $time_end)
             }
         }
         // ['name'], #] where 'name' has the table_ prefix removed.
-        $return[] = "['".substr($key, 6)."', ".count($array[$key])."]";
+        $return[] = "['".substr(str_replace(array('student_', 'instructor_'), '', $key), 6)."', ".count($array[$key])."]";
     }
     return implode(', ', $return);
 }
@@ -113,29 +113,29 @@ function countForPieChartDist($array, $time_start, $time_end)
  * Global variable for the data table
  */
 $tableElements = array(
-    'L' => 'Listening',
-    'Ind' => 'Individual thinking/problem solving',
-    'CG' => 'Clicker question discussion',
-    'WG' => 'Group worksheet activity',
-    'OG' => 'Group activity',
-    'AnQS' => 'Answering a question posed by instructor',
-    'SQ' => 'Student asks question',
-    'WC' => 'Class discussion',
-    'Prd' => 'Making predictions (e.g. outcome of demo)',
-    'SP' => 'Student presentation',
-    'TQ' => 'Test/quiz',
-    'SW' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
-    'SO' => 'Other',
+    'student_L' => 'Listening',
+    'student_Ind' => 'Individual thinking/problem solving',
+    'student_CG' => 'Clicker question discussion',
+    'student_WG' => 'Group worksheet activity',
+    'student_OG' => 'Group activity',
+    'student_AnQ' => 'Answering a question posed by instructor',
+    'student_SQ' => 'Student asks question',
+    'student_WC' => 'Class discussion',
+    'student_Prd' => 'Making predictions (e.g. outcome of demo)',
+    'student_SP' => 'Student presentation',
+    'student_TQ' => 'Test/quiz',
+    'student_W' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
+    'student_O' => 'Other',
 
-    'Lec' => 'Lecturing',
-    'RtW' => 'Real-time writing',
-    'FUp' => 'Instructor feedback on question/activity',
-    'PQ' => 'Posing non-clicker question to students',
-    'CQ' => 'Clicker question',
-    'AnQI' => 'Listening to/answering student questions',
-    'MG' => 'Moving through class and guiding student learning',
-    '1o1' => 'Focus on small group of individuals',
-    'DV' => 'Demo/video/photo/simulation',
-    'AD' => 'Administration',
-    'IW' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
-    'IO' => 'Other');
+    'instructor_Lec' => 'Lecturing',
+    'instructor_RtW' => 'Real-time writing',
+    'instructor_FUp' => 'Instructor feedback on question/activity',
+    'instructor_PQ' => 'Posing non-clicker question to students',
+    'instructor_CQ' => 'Clicker question',
+    'instructor_AnQ' => 'Listening to/answering student questions',
+    'instructor_MG' => 'Moving through class and guiding student learning',
+    'instructor_1o1' => 'Focus on small group of individuals',
+    'instructor_DV' => 'Demo/video/photo/simulation',
+    'instructor_AD' => 'Administration',
+    'instructor_W' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
+    'instructor_O' => 'Other');
