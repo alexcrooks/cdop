@@ -13,7 +13,7 @@
 <tr><td>Prd</td><td>Making a prediction about upcoming activity (e.g. outcome of demo, experiment, etc.)</td></tr>
 <tr><td>SP</td><td>Presentation by student(s)</td></tr>
 <tr><td>TQ</td><td>Test or quiz</td></tr>
-<tr><td>W</td><td>Waiting (instructor late, working on fixing AV problems, instructor otherwise occupied, etc.)</td></tr>
+<tr><td>W</td><td>When there is an opportunity for an instructor to be interacting with or observing/listening to students or group activities and the instructor is not doing so.</td></tr>
 <tr><td>O</td><td>Other - explain in comments</td></tr>
 </table>
 </td>
@@ -29,7 +29,7 @@
 <tr><td>1o1</td><td>One-on-one: extended discussion with one or a few individuals neglecting the rest of the class (can be along with MG or AnQ)</td></tr>
 <tr><td>D/V</td><td>Showing or conducting demo, experiment, simulation, video, animation, or photo</td></tr>
 <tr><td>Adm</td><td>Administration (assign homework, return tests, etc)</td></tr>
-<tr><td>W</td><td>Waiting - no other obvious activity while waiting for activity to complete, etc.</td></tr>
+<tr><td>W</td><td>When there is an opportunity for an instructor to be interacting with or observing/listening to students or group activities and the instructor is not doing so.</td></tr>
 <tr><td>O</td><td>Other - explain in comments</td></tr>
 </table>
 </td>

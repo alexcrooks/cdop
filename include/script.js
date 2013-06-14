@@ -105,7 +105,7 @@ function formatTime(time) {
 	return (minutes > 9 ? minutes : "0" + minutes) + ":" + (seconds > 9 ? seconds : "0" + seconds);
 }
 function fadeMe() {
-	$('#ite').fadeIn(1500).delay(1000).fadeOut(1500);
+	$('#ite').fadeIn(600).delay(600).fadeOut(500);
 }
 function tick() {
 	var currentTime = new Date();

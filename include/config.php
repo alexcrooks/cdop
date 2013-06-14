@@ -56,24 +56,17 @@ function arrayToCleanJSON($array)
 }
 
 /**
- * Cleans up an array to leave only the elements prefixed with table_. Also 
- * removes extraneous fields (Eng, Comments).
+ * Cleans up an array to leave only the requested elements as per param typeToKeep
  *
+ * @param typeToKeep The type of data to keep ('student', 'instructor', 'Eng')
  * @param array The data to be cleaned.
  * @returns A cleaned up array.
  */
-function cleanArray($array)
+function cleanArray($typeToKeep, $array)
 {
     foreach ($array as $key => $value) {
-        if (substr($key, 0, 6) != 'table_') {
+        if (strpos($key, 'table_' . $typeToKeep) === false) {
             unset($array[$key]);
-        } else {
-            switch(substr($key, 6)) { 
-                case 'Eng': // We aren't working with these ones.
-                case 'Comments':
-                    unset($array[$key]);
-                    break;
-            }
         }
     }
     return $array;
@@ -104,7 +97,26 @@ function countForPieChartDist($array, $time_start, $time_end)
             }
         }
         // ['name'], #] where 'name' has the table_ prefix removed.
-        $return[] = "['".substr($key, 6)."', ".count($array[$key])."]";
+        $return[] = "['".substr(str_replace(array('student_', 'instructor_'), '', $key), 6)."', ".count($array[$key])."]";
+    }
+    return implode(', ', $return);
+}
+
+// Same as above but for Eng codes
+function countEngForPieChartDist($array, $time_start, $time_end)
+{
+    $key_start = $time_start / 2; // key = time / 2;
+    $key_end = $time_end / 2;
+    $return = array();
+
+    foreach ($array['table_Eng'] as $key => $value) {
+        if (($key_start > $key) || ($key_end < $key)) {
+            // This is not within our time range -- goodbye.
+            unset($array['table_Eng'][$key]);
+        }
+    }
+    foreach (array_count_values($array['table_Eng']) as $key => $value) {
+        $return[] = "['".$key."', ".$value."]";
     }
     return implode(', ', $return);
 }
@@ -113,29 +125,29 @@ function countForPieChartDist($array, $time_start, $time_end)
  * Global variable for the data table
  */
 $tableElements = array(
-    'L' => 'Listening',
-    'Ind' => 'Individual thinking/problem solving',
-    'CG' => 'Clicker question discussion',
-    'WG' => 'Group worksheet activity',
-    'OG' => 'Group activity',
-    'AnQS' => 'Answering a question posed by instructor',
-    'SQ' => 'Student asks question',
-    'WC' => 'Class discussion',
-    'Prd' => 'Making predictions (e.g. outcome of demo)',
-    'SP' => 'Student presentation',
-    'TQ' => 'Test/quiz',
-    'SW' => 'Waiting (no instructor, technical issues, instructor busy)',
-    'SO' => 'Other',
+    'student_L' => 'Listening',
+    'student_Ind' => 'Individual thinking/problem solving',
+    'student_CG' => 'Clicker question discussion',
+    'student_WG' => 'Group worksheet activity',
+    'student_OG' => 'Group activity',
+    'student_AnQ' => 'Answering a question posed by instructor',
+    'student_SQ' => 'Student asks question',
+    'student_WC' => 'Class discussion',
+    'student_Prd' => 'Making predictions (e.g. outcome of demo)',
+    'student_SP' => 'Student presentation',
+    'student_TQ' => 'Test/quiz',
+    'student_W' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
+    'student_O' => 'Other',
 
-    'Lec' => 'Lecturing',
-    'RtW' => 'Real-time writing',
-    'FUp' => 'Instructor feedback on question/activity',
-    'PQ' => 'Posing non-clicker question to students',
-    'CQ' => 'Clicker question',
-    'AnQI' => 'Listening to/answering student questions',
-    'MG' => 'Moving through class and guiding student learning',
-    '1o1' => 'Focus on small group of individuals',
-    'DV' => 'Demo/video/photo/simulation',
-    'AD' => 'Administration',
-    'IW' => 'Waiting',
-    'IO' => 'Other');
+    'instructor_Lec' => 'Lecturing',
+    'instructor_RtW' => 'Real-time writing',
+    'instructor_FUp' => 'Instructor feedback on question/activity',
+    'instructor_PQ' => 'Posing non-clicker question to students',
+    'instructor_CQ' => 'Clicker question',
+    'instructor_AnQ' => 'Listening to/answering student questions',
+    'instructor_MG' => 'Moving through class and guiding student learning',
+    'instructor_1o1' => 'Focus on small group of individuals',
+    'instructor_DV' => 'Demo/video/photo/simulation',
+    'instructor_AD' => 'Administration',
+    'instructor_W' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
+    'instructor_O' => 'Other');
