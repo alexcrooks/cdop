@@ -31,6 +31,8 @@ a:hover { text-decoration: underline; }
 #legend td { vertical-align: top; }
 #showHideLegend { width: 60%; margin-bottom: 30px; background-color: #ccc; font-weight: bold; }
 #mainTable { text-align: center; }
+#mainTable tr:nth-child(even) { background-color: #dddddd; }
+#mainTable tr:nth-child(1), #mainTable tr:nth-child(2) { background: none; }
 #lbl select, #lbl input[type=text], textarea { padding: 3px 5px; font-size: 12pt; }
 td.tableFieldTaken { min-width: 20px; min-height: 20px; }
 img.tableFieldTaken { width: 100%; height: 100%; }
