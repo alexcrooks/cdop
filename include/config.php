@@ -138,7 +138,7 @@ $tableElements = array(
     'student_Prd' => 'Making predictions (e.g. outcome of demo)',
     'student_SP' => 'Student presentation',
     'student_TQ' => 'Test/quiz',
-    'student_W' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
+    'student_W' => 'Waiting (instructor late, working on fixing AV problems, instructor otherwise occupied, etc.)',
     'student_O' => 'Other',
 
     'instructor_Lec' => 'Lecturing',
