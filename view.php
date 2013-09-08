@@ -18,7 +18,9 @@ $outOfClass = array_filter($outOfClass);
 <b><?php echo $data['instructor_name']; ?></b> on 
 <b><?php echo $date; ?></b><br /><br />
 Observer: <?php echo $data['observer_name']; ?><br /><br />
-<div class="viewPageLane"><img src="img/add.png" /> <a href="index.php">New Session</a></div>
+
+<div class="viewPageLane"><img src="img/add.png" /> <a href="new-session.php">New Session</a></div>
+<div class="viewPageLane"><img src="img/door_out.png" /> <a href="welcome.php"">Go Home</a></div>
 <div class="viewPageLane"><img src="img/printer.png" /> <a onclick="window.print();">Print Data</a></div>
 <div class="viewPageLane"><img src="img/page_excel.png" /> <a href="excel.php?id=<?php echo $_GET['id']; ?>">Export Data to Excel</a></div>
 <div class="viewPageLane"><img src="img/chart_pie.png" /> <a onclick="$('#graphManager').toggle();">Graph Manager</a></div>

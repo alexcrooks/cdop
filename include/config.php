@@ -23,7 +23,7 @@ function array_map_recursive($fn, $arr)
     foreach ($arr as $k => $v) {
         $rarr[$k] = is_array($v)
                   ? array_map_recursive($fn, $v)
-                  : $fn($v); // or call_user_func($fn, $v)
+                  : call_user_func($fn, $v);
     }
     return $rarr;
 }
