@@ -6,7 +6,7 @@ $query->execute();
 $query->bind_result($id, $date, $data);
 ?>
     <div class="viewPageNoPrint">
-        <h1>Classroom Dynamics Observation Protocol (CDOP), ver 7 (as of 19 May 2013)</h1>
+        <h1>Classroom Observation Protocol for Undergraduate STEM - COPUS</h1>
         <div class="viewPageLane"><img src="img/add.png" /> <a href="new-session.php">New Session</a></div>
         <br>
         <table>

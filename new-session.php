@@ -12,9 +12,7 @@
 <div class="clockLabel" onclick="stopRows(false); return false;">Stop Watch</div>
 </div>
 </div>
-<h1>Classroom Dynamics Observation Protocol (CDOP), ver 7 (as of 19 May 2013)</h1>
-This protocol was adapted from: Hora, M., & Ferrare, J.. (2009). Structured observation protocol for instruction
-in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin-Madison, Wisconsin Center for Education Research.
+<h1>Classroom Observation Protocol for Undergraduate STEM - COPUS</h1>
 <br /><br /><br />
 <form method="post" action="process.php">
 <table>
@@ -22,16 +20,16 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
 <td>
 <b>Observer</b>
 <blockquote>
-<div id="lbl"><label>Name:</label><input type="text" name="observer_name" value="Name" class="text_main" onfocus="this.style.color = '#000'; this.value = (this.value == 'Name' ? '' : this.value);" /></div>
-<div id="lbl"><label>Location in Class:</label><input type="text" name="observer_location" value="Location in Class" class="text_main" onfocus="this.style.color = '#000'; this.value = (this.value == 'Location in Class' ? '' : this.value);" /></div>
+<div id="lbl"><label>Name:</label><input type="text" name="observer_name" placeholder="Name" class="text_main" /></div>
+<div id="lbl"><label>Location in Class:</label><input type="text" name="observer_location" placeholder="Location in Class" class="text_main" /></div>
 </blockquote>
 </td>
 <td>
 <b>Class</b>
 <blockquote>
-<div id="lbl"><label>Name, Number, Section:</label><input type="text" name="class_name" value="Name, Number, Section" class="text_main" onfocus="this.style.color = '#000'; this.value = (this.value == 'Name, Number, Section' ? '' : this.value);" /></div>
-<div id="lbl"><label>Instructor Name:</label><input type="text" name="instructor_name" value="Instructor Name"  class="text_main" onfocus="this.style.color = '#000'; this.value = (this.value == 'Instructor Name' ? '' : this.value);" /></div>
-<div id="lbl"><label>Instructor Department:</label><input type="text" name="instructor_department" value="Instructor Department" class="text_main" onfocus="this.style.color = '#000'; this.value = (this.value == 'Instructor Department' ? '' : this.value);" /></div>
+<div id="lbl"><label>Name, Number, Section:</label><input type="text" name="class_name" placeholder="Name, Number, Section" class="text_main" /></div>
+<div id="lbl"><label>Instructor Name:</label><input type="text" name="instructor_name" placeholder="Instructor Name"  class="text_main" /></div>
+<div id="lbl"><label>Instructor Department:</label><input type="text" name="instructor_department" placeholder="Instructor Department" class="text_main" /></div>
 </blockquote>
 </td>
 </tr>
@@ -48,7 +46,7 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
 </tr>
 <tr>
 <?php foreach ($tableElements as $elementName => $elementDesc): ?>
-<td title="<?php echo $elementDesc; ?>"><?php echo str_replace(array('student_', 'instructor_'), '', $elementName); ?></td>
+<td title="<?php echo $elementDesc; ?>"><?php echo str_replace(array('student_', 'instructor_', 'DV', 'AD'), array('', '', 'D/V', 'Adm'), $elementName); ?></td>
 <?php endforeach; ?>
 </tr>
 <tr class="row_to_clone">
@@ -67,12 +65,12 @@ in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin
 <?php include("include/legend.php"); ?>
 <b>Room Information</b>
 <blockquote>
-<div id="lbl"><label>Room Layout:</label><input type="text" name="room_layout" value="Room Layout" class="text_main" onfocus="this.style.color = '#000'; this.value = (this.value == 'Room Layout' ? '' : this.value);" /></div>
+<div id="lbl"><label>Room Layout:</label><input type="text" name="room_layout" placeholder="Room Layout" class="text_main" /></div>
 </blockquote><br />
 <b>Class</b>
 <blockquote>
-<div id="lbl"><label>Approximate # Students Present (iClicker):</label><input type="text" name="class_numstudentspresent" value="# Students Present (iClicker)" class="text_main" onfocus="this.style.color = '#000'; this.value = (this.value == '# Students Present (iClicker)' ? '' : this.value);" /></div>
-<div id="lbl"><label>Unusual Notes About Class:</label><input type="text" name="class_unusual" value="Unusual Notes About Class" class="text_main" onfocus="this.style.color = '#000'; this.value = (this.value == 'Unusual Notes About Class' ? '' : this.value);" /></div>
+<div id="lbl"><label>Approximate # Students Present (iClicker):</label><input type="text" name="class_numstudentspresent" placeholder="# Students Present (iClicker)" class="text_main" /></div>
+<div id="lbl"><label>Unusual Notes About Class:</label><input type="text" name="class_unusual" placeholder="Unusual Notes About Class" class="text_main" /></div>
 <div id="lbl"><label>How Varied is the Whole Course?:</label>
 <select name="class_wholebalance">
 <option value="">How Varied is the Whole Course?</option>

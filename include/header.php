@@ -24,7 +24,7 @@ a:hover { text-decoration: underline; }
 .select_okgood, .select_eng, .select_blooms { font-size: 8pt; width: 35px; overflow: hidden; }
 .text_hap { width: 40px; }
 .text_comments { width: 100px; }
-.text_main { width: 200px; color: #ccc; }
+.text_main { width: 200px; }
 .viewPageLane { margin-top: 6px; }
 
 #graphContainer { white-space: nowrap; }
@@ -32,9 +32,9 @@ a:hover { text-decoration: underline; }
 .graph h1 { font-size: 14pt; }
 .graph .graphContainer { width: 400px; height: 300px; }
 
-#legend { width: 60%; background-color: #eee; }
+#legend { width: 80%; background-color: #eee; }
 #legend td { vertical-align: top; }
-#showHideLegend { width: 60%; margin-bottom: 30px; background-color: #ccc; font-weight: bold; }
+#showHideLegend { width: 80%; margin-bottom: 30px; background-color: #ccc; font-weight: bold; }
 #mainTable { text-align: center; }
 #mainTable tr:nth-child(even) { background-color: #dddddd; }
 #mainTable tr:nth-child(1), #mainTable tr:nth-child(2) { background: none; }
