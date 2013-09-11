@@ -29,7 +29,7 @@
     <tr><td>1o1</td><td>One-on-one: extended discussion with  one or a few individuals, not paying attention to the rest of the class (can be along with MG or AnQ)</td></tr>
     <tr><td>D/V</td><td>Showing or conducting demo, experiment, simulation, video, animation, or photo</td></tr>
     <tr><td>Adm</td><td>Administration (assign homework, return tests, etc)</td></tr>
-    <tr><td>W</td><td>When there is an opportunity for an instructor to be interacting with or observing/listening to students or group activities and the instructor is not doing so.</td></tr>
+    <tr><td>W</td><td>Waiting - when there is an opportunity for an instructor to be interacting with or observing/listening to students or group activities and the instructor is not doing so.</td></tr>
     <tr><td>O</td><td>Other - explain in comments</td></tr>
     </table>
 </td>
