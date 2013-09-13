@@ -49,9 +49,7 @@ Observer: <?php echo $data['observer_name']; ?><br /><br />
 </div>
 </div>
 <div class="viewPageToPrint">
-<h1>Classroom Dynamics Observation Protocol (CDOP), ver 7 (as of 19 May 2013)</h1>
-This protocol was adapted from: Hora, M., & Ferrare, J.. (2009). Structured observation protocol for instruction
-in Institutions of Higher Education (IHEs). Madison, WI: University of Wisconsin-Madison, Wisconsin Center for Education Research.
+<h1>Classroom Observation Protocol for Undergraduate STEM - COPUS</h1>
 <br /><br /><br />
 <table>
 <tr>
