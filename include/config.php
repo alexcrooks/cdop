@@ -1,6 +1,7 @@
 <?php
 require('db.php');
 date_default_timezone_set('America/Vancouver');
+session_start();
 
 $mysqli = new mysqli($global['host'], $global['username'], $global['password'], $global['database']);
 
@@ -123,6 +124,22 @@ function countEngForPieChartDist($array, $time_start, $time_end)
     return implode(', ', $return);
 }
 
+function userLoggedIn()
+{
+    global $mysqli;
+    $query = $mysqli->prepare("SELECT id FROM admin WHERE username = ?;");
+    $query->bind_param('s', $_SESSION['cdop_login_user']);
+    $query->execute();
+    $query->bind_result($id);
+    $query->fetch();
+    $query->close();
+    return $id > 0;
+}
+
+if (!userLoggedIn() && basename($_SERVER['PHP_SELF']) !== 'index.php') {
+    header("Location: index.php");
+}
+
 /**
  * Global variable for the data table
  */
@@ -153,3 +170,4 @@ $tableElements = array(
     'instructor_AD' => 'Administration',
     'instructor_W' => 'Waiting (opportunity for instructor to be doing something and not doing so)',
     'instructor_O' => 'Other');
+
