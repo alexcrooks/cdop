@@ -1,5 +1,6 @@
 <?php require('include/header.php'); ?>
 <?php require('include/config.php'); ?>
+<script type="text/javascript">setInterval(tick, 1000);</script>
 <div id="ite">Begin the next time interval now.</div>
 
 <div id="floatingClock">

@@ -130,4 +130,3 @@ function stopRows() {
 	clearInterval(z);
 	return true;
 }
-setInterval(tick, 1000);
