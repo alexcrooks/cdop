@@ -1,11 +1,11 @@
 <?php
 require('include/config.php');
-require('include/header.php');
 
 if (userLoggedIn()):
     $query = $mysqli->prepare('SELECT `id`, `date`, `value` FROM `data` ORDER BY `date` DESC;');
     $query->execute();
     $query->bind_result($id, $date, $data);
+    require('include/header.php');
 ?>
     <div class="viewPageNoPrint">
         <h1>Classroom Observation Protocol for Undergraduate STEM - COPUS</h1>
@@ -43,11 +43,12 @@ else:
         $query->close();
 
         if ($id > 0):
-            $_SESSION['cdop_login_user'] = $username;
             header("Location: index.php");
+            $_SESSION['cdop_login_user'] = $username;
             exit;
         endif;
     endif;
+    require('include/header.php');
     ?>
     <div class="viewPageNoPrint">
         <h1>Classroom Observation Protocol for Undergraduate STEM - COPUS</h1>

@@ -33,3 +33,4 @@ try {
 	}
 }
 header('Location: view.php?id=' . $mysqli->insert_id);
+exit;
